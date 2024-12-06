@@ -1,0 +1,135 @@
+/*Priority for applying styles in case of conflicts (if multiple selectors select the same element)
+1. Declarations marked with ! (important)
+2. Inline style in html
+3. # (id)
+4. . (class) or : (pseudo-class)
+5. actual html tag (descendant selector takes precedence)
+6. universal selector
+If there are multiple of any of above then last one will apply
+*/
+
+/*Box Model - every element is a rectangular box, which has its own content, height, width, border, padding and margin
+Inline box - elements which occupy only the amount of space it needs, like, <a> <strong> (which means height, width, padding+margin(top/bottom) won't work. use display:block to achieve their behaviour
+Block level box - elements which occupy all the space they can (width of parent element) and insert a line break after them, like, <h1> <p> (most are these).
+inline-block box - elements which occupy only the space they need, have no line breaks + height, width etc.can be applied, like, <img>. use display:inline-block
+*/
+
+h3 {
+    color: green;
+}
+
+p {
+    font-size: 27px;
+}
+
+/*selector list - comma separated selectors which should be styled the same way*/
+h4, h5, h6 {
+    text-align: center;
+}
+
+/*descendant selector - space separated selectors to style nested elements*/
+footer p {
+    font-size: 20px;
+}
+
+/*id can be added to html elements and referenced here, this will always be unique*/
+#styleMeById {
+    font-size: 22px;
+    color: purple;
+}
+
+/*class can be added to html elements which need to be styled the same way*/
+.styleMeByclass {
+    font-size: 23px;
+    font-style: italic;
+    line-height: 0.1;
+}
+
+/*remove bullet points from list*/
+ul {
+    list-style: none;
+}
+
+/*colours are represented in 2 ways:
+1. rgb notation - every colour is a combination of red, green and blue and all of them take a number between 0 and 255, e.g., white has 255 for all -> rgb(255, 255, 255), black has 0 for all -> rgb(0, 0, 0)
+2. rgba notation - where we can include transaprency of the colour also, e.g., rgba(0, 0, 0, 0.2)
+3. hexadecimal notation - same as rgb, but the number is represented in hexadecimal format, e.g., #ffffff, shorthand will be #fff*/
+#hexcolour {
+    color: #ad5f5f;
+    background-color: #f7f7f7;
+}
+#rgbcolour {
+    color: rgba(255, 136, 56);
+    border: 2px solid lightblue;
+    font-size: 15px;
+    /*padding - distance between content and it's border*/
+    padding: 5px;
+}
+
+/*pseudo classes*/
+li:first-child {
+    font-weight: bold;
+}
+li:last-child {
+    font-style: italic;
+}
+li:nth-child(2) {/*takes odd and even as values too*/
+    color: magenta;
+}
+article p:nth-child(odd) {/*take into consideration all the elements inside article, not just p elements*/
+    background-color: #f7f7f7;
+}
+/*chaining pseudo classes*/
+a:link:last-child {
+    margin-left: 30px;
+}
+
+/*styling links*/
+a:link {
+    color: darkblue;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: orangered;
+    text-decoration: underline dotted;
+}
+a:active {/*when we click on the link*/
+    font-weight: bold;
+}
+
+/*important*/
+h5 {
+    text-align: right !important;
+}
+
+/*inheritance - styles of parent element are passed to the child elements
+these are mostly related to text, e.g., font-size, font-family, etc.
+border won't be inherited*/
+body {
+    font-family: sans-serif;
+    border-top: 5px solid green;
+}
+
+/*universal selector will be applied to all the elements even with properties which cannot be inherited
+but if there are styles defined for individual elements, they will overwrite this universal setting*/
+* {
+    /* border-top: 5px solid red;
+    font-size: 50px; */
+}
+
+/*margin - area outside the border and content, used to give space between elements
+collapsing margins - say first element has margin-bottom as 15 and second element has margin-top as 25
+then total margin won't be 15+25, rather it will be 25*/
+li {
+    margin-bottom: 5px;
+}
+
+/*center the whole page using margin properties
+this will ensure that whenever we resize the browser, margins on left and right will always be the same and the whole page will look like it's in the center*/
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}

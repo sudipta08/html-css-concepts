@@ -1,0 +1,62 @@
+article {
+    border: 5px solid black;
+    font-family: sans-serif;
+    width: 85%;
+    margin: auto;
+}
+
+#book-heading {
+    text-align: center;
+    background-color: #f7f7f7;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#amount {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.add-text {
+    font-weight: bold;
+    margin-top: 0px;
+    text-transform: uppercase;
+    color: grey;
+}
+
+.product-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+a:link, a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: square;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    font-size: 20px;
+}

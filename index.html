@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head><!--contains things which are not rendered on the browser, like title-->
+        <!--character set that we are using in the whole file-->
+        <meta charset="UTF-8"/><!--utf-8 is basically everything that's present in english language-->
+        <title>My first webpage</title>
+    </head>
+
+    <body><!--contains the content which will be rendered/seen on the browser-->
+        <!--1. headings go from h1 to h6, h1 being the biggest-->
+        <h1>My first webpage</h1>
+        <!--2. paragraph-->
+        <!--3. bold text, earlier <b> was used which has now been replaced with <strong>-->
+        <!--4. italic text, earlier <i> was used which has now been replaced with <em>, which means emphasized-->
+        <p>This is my <strong>first</strong> webpage. I am very <em>excited</em> to write this paragraph.</p>
+        <!--5. ordered list with numbers-->
+        <ol>
+            <li>Learn HTML</li>
+            <li>Learn CSS</li>
+        </ol>
+        <!--6. unordered list with bullets-->
+        <ul>
+            <li>Learn Nodejs</li>
+            <li>Learn Javascript</li>
+        </ul>
+        <!--7. images-->
+        <!--src (describes the path from which image should be picked from) is an ATTRIBUTE (piece of data which describes an HTML element)-->
+        <!--alt (describes the description of the image) - good for the search engines which will then understand what the image is all about.
+        good for screen readers also, who cannot see the text, but the text will be read to them.
+        if the image somehow doesn't load, this text will be shown.-->
+        <img src="images/image1.jpeg" alt="test image" width="250" height="375"/>
+        <!--8. hyperlinks - anchor tag-->
+        <!--target attribute will be responsible for opening a new tab or not-->
+        <p><a href="https://www.google.com" target="_blank">Your goto place</a></p>
+        <!--open another html file-->
+        <a href="contanerise.html">Goto Demo</a><br><br>
+        <!--9. button-->
+        <button>Click me</button>
+    </body>
+</html>
