@@ -1,8 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 article {
     border: 5px solid black;
     font-family: sans-serif;
     width: 85%;
-    margin: auto;
+    margin: 50px auto;
+    position: relative;
 }
 
 #book-heading {
@@ -15,23 +20,22 @@ article {
 }
 
 #amount {
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .add-text {
     font-weight: bold;
-    margin-top: 0px;
     text-transform: uppercase;
     color: grey;
+    font-size: 14px;
 }
 
 .product-header {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 0;
+    font-size: 20px;
 }
 
 a:link, a:visited {
@@ -44,6 +48,7 @@ a:hover {
 
 ul {
     list-style: square;
+    padding-left: 18px;
 }
 
 li {
@@ -59,4 +64,62 @@ button {
     padding-top: 10px;
     padding-bottom: 6px;
     font-size: 20px;
+    clear: both;
+}
+
+.sale {
+    position: absolute;
+    background-color: rgb(214, 42, 42);
+    color: white;
+    font-weight: bold;
+    top: -35px;
+    left: -37px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+}
+
+.available-colours {
+    margin-top: 12px;
+}
+
+.red {
+    border: 10px solid red;
+    display: inline-block;
+}
+
+.blue {
+    border: 10px solid blue;
+    display: inline-block;
+}
+
+.yellow {
+    border: 10px solid yellow;
+    display: inline-block;
+}
+
+.green {
+    border: 10px solid green;
+    display: inline-block;
+}
+
+.orange {
+    border: 10px solid orange;
+    display: inline-block;
+}
+
+.purple {
+    border: 10px solid purple;
+    display: inline-block;
+}
+
+.book-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 30px;
+}
+
+.book-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

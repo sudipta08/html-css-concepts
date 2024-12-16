@@ -1,0 +1,49 @@
+/* layout means the way in which elements are arranged on a webpage */
+
+/*1. using float - getting outdated
+an element is placed on the left or right side of the container (or of the nearest floating element) and other elements float around it
+float makes elements inline-block, which means top/bottom margin/padding can be applied*/
+.box {
+    float: left;
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+}
+
+.para {
+    float: left;
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+header {
+    background-color: #f7f7f7;
+}
+
+/*right now, header has 2 elements both of which are floating
+this will make the container to lose its height (collapsing heights)
+in order to fix this, following hack was added which inserted an element at the end of the container
+and cleared both the floats*/
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+h3 {
+    float: left;
+}
+
+nav {
+    float: right;
+    margin-top: 18px;
+}
+
+a {
+    font-size: 20px;
+    margin: 0 8px;
+}
+
+article {
+    margin-top: 10px;
+}

@@ -1,0 +1,59 @@
+/*3 using css grid - perfect for 2-dimensional row
+main idea is to divide a container into rows and columns*/
+.container {
+    display: grid;
+    /*specify width of each column, use fr(action) if dynamic width is needed
+    if we use auto, then it will take only the space that it needs*/
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px;
+    gap: 30px; /*gap between each row and column, individually gap-column or gap-row could be used*/
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+    height: 600px;
+    /*align the items inside the container*/
+    align-items: center;
+    justify-items: center;
+}
+
+.grid {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+
+}
+
+.red { /*called a grid item which is part of a grid container*/
+    background-color: rgb(158, 103, 103);
+    align-self: center; /*overwrite align-items property*/
+    justify-self: center; /*overwrite justify-items property*/
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.green {
+    background-color: rgb(94, 134, 94);
+    height: 100px;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: rgb(141, 100, 141);
+    /*manually specify exact column and row based on grid line
+    we can also specify how many cells it should span: 3/span 1
+    if we wnat it to span till end, it will be 3/-1*/
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.header {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,64 @@
+/*2. using flex box - perfect for 1-dimensional layout
+main idea is that a container is automatically divided by its child elements
+and it makes it easier to align items next to each other (otherwise we would have to use float)
+it solves problems like vertical centering
+
+x-axis - main axis
+y-axis - cross axis
+*/
+.container { /*called a flex container for which display property is set to flex*/
+    background-color: grey;
+    font-size: 40px;
+    display: flex; /*all the elements in this div will come together in one row*/
+    align-items: center; /*for vertical alignment default is stretch*/
+    justify-content: center; /*for horizontal alignment*/
+    gap: 5px; /*to create gap between items without using margin*/
+}
+
+.red { /*called a flex item which is part of a flex container*/
+    background-color: red;
+    align-self: flex-start; /*overwrite the default align-items property of container*/
+}
+
+.blue {
+    background-color: blue;
+    align-self: stretch; /*overwrite the default align-items property of container and stretches the contant to match the parent container's height*/
+}
+
+.green {
+    background-color: green;
+    height: 100px;
+    order: -1; /*negative number will take it to the front, positive number will take it to the back*/
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.flex {
+    /*default-0, determines if elements are allowed to grow to their max size
+    it will fill the whole width*/
+    flex-grow: 1;
+    /*default-auto, we don't assign width to flex item, rather use this property
+    if an item needs more space than specified width, it will expand
+    and it tries to fit all the elements within parent container (it can shrink also as defined by flex-shrink property)*/
+    flex-basis: auto;
+    /*default-1, determines if flex box is allowed to shrink or not
+    if value is 0, it's not allowed to shrink*/
+    flex-shrink: 1;
+
+    /*always use the shorthand flex: 1, which means flex-grow is 1 and elements are allowed to fill the whole container
+    whatever elements are marked as flex:1, they will have the same width
+    or custom would be flex: flex-grow flex-shrink flex-basis*/
+}
+
+.header {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

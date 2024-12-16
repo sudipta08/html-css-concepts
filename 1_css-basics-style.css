@@ -14,6 +14,11 @@ Block level box - elements which occupy all the space they can (width of parent 
 inline-block box - elements which occupy only the space they need, have no line breaks + height, width etc.can be applied, like, <img>. use display:inline-block
 */
 
+/*setting box-sizing: border-box means height and width will include padding and border, so actual content may shrink to accomodate the extra width
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+
+/*If any property doesn't work on an element, think what's the display of that element, inline, block or inline-block*/
+
 h3 {
     color: green;
 }
@@ -129,7 +134,37 @@ li {
 /*center the whole page using margin properties
 this will ensure that whenever we resize the browser, margins on left and right will always be the same and the whole page will look like it's in the center*/
 .container {
+    position: relative;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*position - how an element is positioned on the document
+when we position an element absolute, other elements are displayed on the screen, considering that it doesn't exist
+top, bottom, left, right decide where it should exist relative to <body> (if none of the parent elements aare marked relative) or any parent element that's positioned relative */
+.position-element {
+    font-size: 15px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+/*pseudo elements - which don't exist as html element but we can still style them in css
+adjacent selector - sibling that comes right after the element*/
+article + p::first-letter {
+    font-size: 40px;
+}
+/*most used are after and before which can be used to create content instead of defining a new html element*/
+h2 {
+    position: relative;
+    background-color: green;
+}
+h2::after {
+    content: '*';
+    background-color: #ff0;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
 }
