@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email Layout</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: sans-serif;
+                height: 100vh;
+                font-size: 22px;
+                text-align: center;
+
+                display: grid;
+                grid-template-columns: 80px 400px 1fr 250px;
+                grid-template-rows: 80px 1fr;
+            }
+            nav {
+                grid-row: 1 / -1;
+                background-color: #868e96;
+                color: #fff;
+                padding: 18px;
+                font-weight: bold;
+            }
+            menu {
+                grid-column: 2 / -1;
+                background-color: #364fc7;
+                padding: 18px;
+
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .btn {
+                padding: 4px 8px;
+                font-size: 16px;
+            }
+            .btn-actions {
+                background-color: #4c6ef5;
+                color: white;
+                border: 1px solid #4263eb;
+            }
+            .btn-trash {
+                background-color: #fa5252;
+                color: white;
+                border: 1px solid #f03e3e;
+                margin-left: auto;
+            }
+            .emails {
+                padding: 18px;
+                background-color: #dee2e6;
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                overflow: scroll;
+            }
+            .email {
+                padding: 24px;
+                background-color: #adb5bd;
+            }
+            aside {
+                background-color: #dee2e6;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>Nav</nav>
+        <menu>
+            <button class="btn btn-actions">New</button>
+            <button class="btn btn-actions">Reply</button>
+            <button class="btn btn-actions">Forward</button>
+            <button class="btn btn-actions">Mark unread</button>
+            <button class="btn btn-trash">Trash</button>
+        </menu>
+        <section class="emails">
+            <div class="email">Email 1</div>
+            <div class="email">Email 2</div>
+            <div class="email">Email 3</div>
+            <div class="email">Email 4</div>
+            <div class="email">Email 5</div>
+            <div class="email">Email 6</div>
+            <div class="email">Email 7</div>
+            <div class="email">Email 8</div>
+            <div class="email">Email 9</div>
+            <div class="email">Email 10</div>
+            <div class="email">Email 11</div>
+            <div class="email">Email 12</div>
+            <div class="email">Email 13</div>
+            <div class="email">Email 14</div>
+        </section>
+        <section>Email view</section>
+        <aside>Additional Info</aside>
+    </body>
+</html>

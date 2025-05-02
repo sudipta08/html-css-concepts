@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagination</title>
+
+        <style>
+            .pagination {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                font-family: sans-serif;
+            }
+            button {
+                border: 2px solid #0b7285;
+                border-radius: 50%;
+                background-color: #fff;
+                width: 48px;
+                height: 48px;
+            }
+            .icon {
+                stroke: #0b7285;
+                width: 24px;
+                height: 24px;
+            }
+            button:hover {
+                background-color: #0b7285;
+            }
+            button:hover .icon{
+                stroke: #fff;
+            }
+            a:link, a:visited {
+                text-decoration: none;
+                padding: 4px 8px;
+                color: #0b7285;
+            }
+            a:hover {
+                background-color: #0b7285;
+                color: #fff;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pagination">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <span>...</span>
+            <a href="#">26</a>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+    </body>
+</html>

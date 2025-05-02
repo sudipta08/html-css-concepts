@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carousel</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            .carousel {
+                padding: 80px;
+            }
+            .images {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                background-color: #d9480f;
+                border-radius: 8px;
+                position: relative;
+            }
+            img {
+                border-radius: 8px;
+                margin-left: 60px;
+                transform: scale(1.2);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            }
+            .review-text {
+                font-size: 24px;
+                color: #ffa94d;
+                margin-bottom: 60px;
+                font-style: italic;
+                line-height: 1.2;
+            }
+            .review-author, .designation {
+                color: #ffc078;
+            }
+            .btn {
+                position: absolute;
+                background-color: #fff;
+                border: none;
+                border-radius: 50%;
+                padding: 8px;
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+            }
+            .btn-left {
+                transform: translate(-50%, 0);
+            }
+            .btn-right {
+                right: 0;
+                transform: translate(50%, 0);
+            }
+            .btn-icon {
+                stroke: #d9480f;
+                height: 24px;
+                width: 24px;
+            }
+            .dots {
+                display: flex;
+                gap: 10px;
+                position: absolute;
+                bottom: -24px;
+                left: 50%;
+            }
+            .dot {
+                height: 12px;
+                width: 12px;
+                border-radius: 50%;
+                border: 2px solid #d9480f;
+            }
+            .dot-fill {
+                background-color: #d9480f;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="carousel">
+            <div class="images">
+                <img src="images/chair1.jpg" alt="book" />
+                <blockquote>
+                    <p class="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore eveniet, doloremque illo non aliquam facilis eum eos natus vel necessitatibus, totam eaque perferendis iure dicta voluptatum minima saepe nulla cupiditate."</p>
+                    <p class="review-author">Maria de Almeida</p>
+                    <p class="designation">Senior Product Manager</p>
+                </blockquote>
+                <button class="btn btn-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="btn-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <button class="btn btn-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" class="btn-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+                <div class="dots">
+                    <button class="dot dot-fill"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

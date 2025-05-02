@@ -19,6 +19,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
 
 /*If any property doesn't work on an element, think what's the display of that element, inline, block or inline-block*/
 
+/*transition - can be used for simple animations, say we want a property (like bg-color) to transition after 1s*/
+
+/*box-shadow - takes 5 parameters: horizontal-offset vertical-offset blur radius(to scale the box shadow up) colour
+can be used for giving inverted margin*/
+
 h3 {
     color: green;
 }
@@ -135,7 +140,7 @@ li {
 this will ensure that whenever we resize the browser, margins on left and right will always be the same and the whole page will look like it's in the center*/
 .container {
     position: relative;
-    width: 90%;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -167,4 +172,22 @@ h2::after {
     font-weight: bold;
     position: absolute;
     right: 0;
+}
+
+/*max-width - maximum width of element. it will override the value of width
+if max-width is less than parent container width, then max-width will be taken
+if max-width is more than parent container width, then container width will be taken*/
+.set-max-width {
+    background-color: #333;
+    color: #fff;
+    max-width: 1100px;
+}
+
+/*rem - unit to meaure font-size of root element (html)*/
+/*em - unit to measure size of own element or parent element (only in case of font-size)*/
+.using-em {
+    font-size: 18px;
+}
+.using-em p {
+    font-size: 2em;
 }
